@@ -1,0 +1,22 @@
+/*
+free()-We use it to free memory that is allocated
+using malloc & calloc
+free(ptr);
+*/
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+    float *ptr;
+    ptr = (float*) calloc(5,sizeof(float));
+        for(int i=0;i<4;i++){
+        printf("%f\n",ptr[i]);
+            }
+            printf("\n");
+        free(ptr);
+        ptr = (float*) calloc(2,sizeof(float));
+        for(int i=0;i<2;i++){
+        printf("%f\n",ptr[i]);
+            }
+
+    return 0;
+}
